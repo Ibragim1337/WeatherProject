@@ -1,0 +1,9 @@
+.sign-in-container {
+  font-family: "Gill Sans", sans-serif;
+  width: 500px;
+  height: 500px;
+  border: 2px solid;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
