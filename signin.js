@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (login.value === '' || password.value === '') {
             error.textContent = 'Please enter both login and password.';
         } else {
-            window.location.href = 'wheather/wheather.html';
+            window.location.href = './weather/weather.html';
         }
     });
 });
