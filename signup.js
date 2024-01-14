@@ -40,4 +40,3 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('user', JSON.stringify(user));
 });
 
-// localStorage.clear();
