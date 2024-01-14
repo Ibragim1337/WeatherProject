@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const confirm = document.querySelector('.confirm');
     const btn = document.querySelector('.btn');
     const error = document.querySelector('.error-message');
+    const userName = document.querySelector('.login').value;
+    const userPassword = document.querySelector('.password').value;
+
 
     btn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -19,4 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'signin.html';
         }
     });
+
+    const existingUser = JSONsparse(localStorage.getItem('user')) || [];
+
+    const isUserExist = existingUser.some((user) => user.name === userName);
+    if(isUserExist){
+        alert('User Already Exist')
+    }
+
+    const user = {
+        name: userName,
+        password: userPassword
+    }
+
+    existingUser.push(user);
+
+    localStorage.setItem('user', JSON.stringify(user));
 });
+
+// localStorage.clear();
